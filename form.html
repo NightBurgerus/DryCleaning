@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/formCss.css">
+        <title>Заявка</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h1>Заявка</h1>
+            <form>
+                <div class="name">
+                    <legend for="name">Фамилия и Имя</legend>
+                    <input type="text" name="name">
+                </div>
+                <div class="number">
+                    <legend for="number">Номер телефона<div>+7</div></legend>
+                    <input type="tel" name="number">
+                </div>
+                <div class="email">
+                    <legend for="email">Адрес электронной почты</legend>
+                    <input type="email" name="email">
+                </div>
+                <div class="product">
+                    <p>Выберете позицию</p>
+                    <div class="productList">
+                        <div>
+                            <input list="products">
+                        </div>
+                    </div>
+                    <input type="button" value="Добавить позицию" class="addButton" onclick="addCategory()">
+                </div>
+                <div class="date">
+                    <input type="date" oninput="validateDate()">
+                </div>
+                <input type="submit" value="submit">
+            </form>
+            <datalist id="products">
+                <option>Одежда</option>
+                <option>Обувь</option>
+                <option>Домашний интерьер</option>
+                <option>Аксессуары</option>
+            </datalist>
+            <datalist id="clothes">
+                <option>Повседневная</option>
+                <option>Торжественная</option>
+                <option>Верхняя</option>
+                <option>Детская</option>
+                <option>Домашняя</option>
+                <option>Спортивная</option>
+            </datalist>
+            <datalist id="shoes">
+                <option>Туфли</option>
+                <option>Сапоги</option>
+                <option>Кроссовки</option>
+                <option>Ботинки</option>
+                <option>Балетки</option>
+            </datalist>
+            <datalist id="accessories">
+                <option>Галстук</option>
+                <option>Сумка</option>
+                <option>Шарф</option>
+                <option>Зонт</option>
+                <option>Головной убор</option>
+                <option>Пурчатки</option>
+            </datalist>
+            <datalist id="home">
+                <option>Подушки</option>
+                <option>Ковры</option>
+                <option>Постельное бельё</option>
+                <option>Шторы</option>
+                <option>Одеяло, плед, покрывало</option>
+                <option>Чехлы</option>
+                <option>Мягкая игрушка</option>
+            </datalist>
+        </main>
+        <footer></footer>
+        <script src="scripts/formScript.js"></script>
+    </body>
+</html>
