@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 10%;
+}
+
+form {
+    border: 2px solid black;
+    width: 70%;
+    margin: 5% 0% 10% 10%;
+    padding-bottom: 5%;
+}
+
+form > div {
+    padding: 5% 0% 0% 5%;
+    width: 100%;
+}
+
+div input {
+    width: 30%;
+}
+
+div legend {
+    width: 25%;
+    float: left;
+}
+.number div {
+    float: right;
+    padding-right: 5px;
+}
+
+.email p {
+    float: right;
+    margin-right: 46%;
+    color: red;
+    display: none;
+}
+
+.productList {
+    margin: 2% 0% 2% 0%;
+}
+.productList div {
+    padding: 0;
+    height: 25px;
+}
+
+.productList input {
+    width: 20%;
+    margin-right: 2%;
+    float: left;
+}
+
+.delButton {
+    background: url(img/bin.png);
+    width: 25px;
+    height: 25px;   
+    margin-left: 45%;
+}
+.delButton:hover {
+    background: url(img/redBin.png);
+}
+
+.addButton {
+    float: bottom;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+}
