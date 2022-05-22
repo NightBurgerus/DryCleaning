@@ -125,3 +125,18 @@ function validateDate() {
     inputDate   = inputDate.match(/^.*\s\d{4}/i).pop()
     console.log(inputDate < currentDate)
 }
+
+function submitClicked() {
+    let inputs = document.getElementsByTagName("input")
+    for (let i = 0; i < input.length; i++ ){
+        if (inputs[i].value.trim().length == 0) {
+            alert("Не все поля заполнены")
+            console.log(false)
+            
+            return false
+        }
+    }
+    alert("Данные отправлены на сервер")
+    console.log(true)
+    return true
+}
