@@ -1,0 +1,36 @@
+.details {
+    width: 50%;
+    height: 50px;
+    border: 2px solid black;
+    margin-bottom: 2vh;
+}
+.details-header {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    padding-top: 6px;
+}
+
+.details-header img {
+    float: right;
+    padding: 8px;
+    height: 50%;
+}
+
+.details-list {
+    display: none;
+    width: 100%; 
+    height: 90%;
+}
+
+.details-list > div {
+    padding-left: 1%;
+    height: 0;
+    font-size: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.details-list > div:hover {
+    background: rgba(0, 0, 0, 0.2)
+}

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 1000px;
+}
+
+header {
+    z-index: 110;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(50, 50, 50, 0.3);
+}
+
+#header-image {
+    float: left;
+    height: 10vh;
+    width: 10vh;
+    background-color: aqua;
+}
+
+header h1 {
+    float: left;
+    padding: 3vh;
+}
+
+header menu {
+    float: right;
+}
+
+header a:visited, header a:active {
+    color: black;
+}
+
+header menu div {
+    float: left;
+    font-size: 1.5vw;
+    padding: 2vw;
+}
+
+header menu div:hover {
+    background-color: black;
+    color: white;
+}
+
+/*  MAIN */
+
+#pre_main {
+    background-color: rgb(117, 205, 226);
+}
+
+#main > div:first-child{
+    background: url("img/back1.jpeg");
+    background-size: 100% cover;
+    background-position: bottom center;
+    border-bottom: 1px solid rgb(237, 236, 232);
+    border-top: 1px solid rgb(117, 205, 226);
+    border-left: 1px solid rgb(117, 205, 226);
+    border-right: 1px solid rgb(117, 205, 226);
+    height: 80vh;
+}
+
+#main h1 {
+    margin: 10%;
+    opacity: 0;
+}
+
+.slider {
+    opacity: 0;
+}
+
+#slider-around {
+    border-top: 1px solid rgb(237, 236, 232);
+    background: linear-gradient(rgb(237, 236, 232), rgb(117, 205, 226))
+}
+
+#pre_services {
+    background-color: rgb(117, 205, 226);
+}
+
+#services {
+    border: 1px solid transparent;
+    border-top:rgb(117, 205, 226);
+    background: linear-gradient(rgb(117, 205, 226), rgb(255, 246, 236));
+}
+
+#services > div, 
+#services > h1 {
+    opacity: 0;
+    padding: 2%;
+}
+
+
+#about {
+    height: 2000px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+#pre_main, #pre_services, #pre_about {
+    height: 10vh;
+}

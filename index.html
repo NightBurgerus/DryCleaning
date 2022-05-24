@@ -1,12 +1,160 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles/mainStyle.css">
-        <title>Химчистка</title>
+        <link rel="stylesheet" href="styles/trpo_css.css">
+        <link rel="stylesheet" href="styles/slider.css">
+        <link rel="stylesheet" href="styles/details.css"
     </head>
     <body>
-        <header></header>
-        <main></main>
+        <header>
+            <div id="header-image"></div>
+            <h1>Химчистка</h1>
+            <menu>
+                <a href="#pre_main"><div>Главная</div></a>
+                <a href="#pre_services"><div>Услуги</div></a>
+                <a href="form.html"><div>Заявка</div></a>
+                <a href="#pre_about"><div>О нас</div></a>
+            </menu>
+        </header>
+        <main>
+            <div id="pre_main"></div>
+            <div id="main">
+                <div id="startBlock">
+                    <h1>Главная</h1> 
+                </div>
+                    <div id="slider-around">
+                    
+                    <!-- СЛАЙДЕР -->
+                    <div class="slider">
+                        <div class="slide-nav"> 
+                            <div class="left-arrow"><div> </div></div>
+                            <div class="right-arrow"><div> </div></div>
+                        </div>
+                        <div class="images">
+                            <!-- ИЗОБРАЖЕНИЯ -->
+                            <div class="image1 "></div>
+                            <div class="image2 hiden"></div>
+                            <div class="image3 hiden"></div>
+                        </div>
+                        <div class="dots">
+                            <div class="dot1 selected"></div>
+                            <div class="dot2"></div>
+                            <div class="dot3"></div>                
+                        </div>
+                        <div class="images-labels">
+                            <div class="label1 ">Хуй</div>
+                            <div class="label2 hiden">Соси</div>
+                            <div class="label3 hiden">Губой тряси</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="pre_services"></div>
+            <div id="services">
+                <h1>Наши услуги</h1>
+                <div>
+                    <div class="details">
+                        <div class="details-header"><span>Одежда</span><img src="img/open.png"></div>
+                        <div class="details-list">
+                            <div>Повседневная</div>
+                            <div>Торжественная</div>
+                            <div>Верхняя</div>
+                            <div>Детская</div>
+                            <div>Домашняя</div>
+                            <div>Спортивная</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="details-header"><span>Обувь</span><img src="img/open.png"></div>
+                        <div class="details-list">
+                            <div>Туфли</div>
+                            <div>Сапоги</div>
+                            <div>Кроссовки</div>
+                            <div>Ботинки</div>
+                            <div>Балетки</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="details-header"><span>Домашний интерьер</span><img src="img/open.png"></div>
+                        <div class="details-list">
+                            <div>Подушки</div>
+                            <div>Ковры</div>
+                            <div>Постельное бельё</div>
+                            <div>Шторы</div>
+                            <div>Одеяло, плед, покрывало</div>
+                            <div>Чехлы</div>
+                            <div>Мягкая игрушка</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="details-header"><span>Аксессуары</span><img src="img/open.png"></div>
+                        <div class="details-list">
+                            <div>Галстук</div>
+                            <div>Сумка</div>
+                            <div>Спальный мешок</div>
+                            <div>Шарф</div>
+                            <div>Зонт</div>
+                            <div>Головной убор</div>
+                            <div>Перчатки</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pre_about"></div>
+            <div id="about">
+                <h1>О нас</h1>
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/192/vladimir/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Владимир</a><a href="https://yandex.ru/maps/192/vladimir/?ll=40.372543%2C56.145001&mode=whatshere&utm_medium=mapframe&utm_source=maps&whatshere%5Bpoint%5D=40.371725%2C56.145383&whatshere%5Bzoom%5D=18&z=18" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Строителей, 3/7 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUJEEqBKA" width="800" height="480" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            </div>
+        </main>
         <footer></footer>
+        <script src="scripts/slider.js"></script>
+        <script src="scripts/details.js"></script>
+        <script>
+            window.onload = function() {
+                let startBlock = document.getElementById("startBlock")
+                let header = document.getElementById("main").getElementsByTagName("h1")[0]
+                header.style.opacity = 0
+                animation(startBlock, 0, 0.05, 0)
+
+                setTimeout(function() {
+                    animation(header, 0, 0.05, 0)
+                }, 1000)
+            }
+
+            let slider  = document.getElementsByClassName("slider")[0];
+            let startBlockIsShowed = false
+            let sliderIsShowed = false
+            let services = document.getElementById("services").getElementsByTagName("h1")[0]
+            let servicesList = document.getElementById("services").getElementsByTagName("div")[0]
+            let servicesHeaderIsShowed = false
+            let servicesY = document.getElementById("main").getElementsByTagName("div")[1].offsetHeight + document.getElementById("pre_services").offsetHeight * 2
+
+            window.onscroll = function() {
+                if (pageYOffset >= document.getElementById("main").getElementsByTagName("div")[0].offsetHeight / 2 && !sliderIsShowed) {
+                    initSlider()
+                    animation(slider, 0, 0.05, 0)
+                    sliderIsShowed = true
+                }
+                if (pageYOffset >= servicesY && !servicesHeaderIsShowed) {
+                    animation(services, 0, 0.1, 500)
+                    animation(servicesList, 0, 0.1, 1000)
+                    servicesHeaderIsShowed = true;
+                }
+            }
+
+            function animation(element, time, step, delay) {
+                setTimeout(function() {
+                    if (time < 1) {
+                        time += step
+                        element.style.opacity = time
+                        setTimeout(function() {
+                            animation(element, time, step, 0)
+                        }, 50)
+                    }
+                }, delay)
+            }
+        </script>
     </body>
 </html>
