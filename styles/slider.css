@@ -38,17 +38,27 @@
 .left-arrow div {
     width: 100%;
     height: 100%;
+    opacity: 0.5;
     background: url(img/leftArrow.png);
     background-size: 100% 100%;
     background-position: center center;
 }
 
+.left-arrow div:hover {
+    opacity: 1;
+}
+
 .right-arrow div {
     width: 100%;
     height: 100%;
+    opacity: 0.5;
     background: url(img/rightArrow.png);
     background-size: 100% 100%;
     background-position: center center;
+}
+
+.right-arrow div:hover {
+    opacity: 1;
 }
 
 
