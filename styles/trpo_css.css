@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+a, a:visited {
+    color: black;
+}
+
 body {
     height: 1000px;
 }
@@ -53,6 +57,7 @@ header menu div:hover {
 }
 
 #main > div:first-child{
+    opacity: 0;
     background: url("img/back1.jpeg");
     background-size: 100% cover;
     background-position: bottom center;
