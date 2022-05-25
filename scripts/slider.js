@@ -73,7 +73,19 @@ function nextSlide(direction, choosen_slide) {
 left_arrow.addEventListener("click", function() {
     nextSlide("left", null)
 })
+left_arrow.addEventListener("mouseover", function() {
+    left_arrow.getElementsByTagName("div")[0].style.opacity = 1;
+})
+left_arrow.addEventListener("mouseout", function() {
+    left_arrow.getElementsByTagName("div")[0].style.opacity = 0.5;
+})
 
 right_arrow.addEventListener("click", function() {
     nextSlide("right", null)
+})
+right_arrow.addEventListener("mouseover", function() {
+    right_arrow.getElementsByTagName("div")[0].style.opacity = 1;
+})
+right_arrow.addEventListener("mouseout", function() {
+    right_arrow.getElementsByTagName("div")[0].style.opacity = 0.5;
 })
