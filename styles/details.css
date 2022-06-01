@@ -1,15 +1,25 @@
 .details {
-    width: 50%;
+    width: 100%;
     height: 50px;
     border: 2px solid black;
+    border-bottom: 8px solid black;
     margin-bottom: 2vh;
 }
 .details-header {
+    background-color: rgb(231, 232, 248);
     width: 100%;
     height: 100%;
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding-top: 6px;
 }
+
+.details-header > div {
+    display: inline-block;
+    width: 80%;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
 
 .details-header img {
     float: right;
@@ -24,6 +34,7 @@
 }
 
 .details-list > div {
+    background-color: rgb(236, 238, 250);
     padding-left: 1%;
     height: 0;
     font-size: 0;
@@ -32,5 +43,10 @@
 }
 
 .details-list > div:hover {
-    background: rgba(0, 0, 0, 0.2)
+    background-color: rgba(231, 232, 248, 0.9);
+    color: white;
+    text-shadow: 1px 0px 3px black,
+                -1px 0px 3px black,
+                 0px 1px 3px black,
+                 0px -1px 3px black;
 }

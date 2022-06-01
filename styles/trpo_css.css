@@ -8,7 +8,9 @@ a, a:visited {
 }
 
 body {
-    height: 1000px;
+    background: url(img/mainBack.png);
+    background-size: 100% 100%;
+    /* height: 1000px; */
 }
 
 header {
@@ -53,43 +55,44 @@ header menu div:hover {
 /*  MAIN */
 
 #pre_main {
-    background-color: rgb(117, 205, 226);
+    /* background-color: rgb(117, 205, 226); */
 }
 
 #main > div:first-child{
     opacity: 0;
-    background: url("img/back1.jpeg");
+    /* background: url("img/back1.jpeg");
     background-size: 100% cover;
     background-position: bottom center;
     border-bottom: 1px solid rgb(237, 236, 232);
     border-top: 1px solid rgb(117, 205, 226);
     border-left: 1px solid rgb(117, 205, 226);
-    border-right: 1px solid rgb(117, 205, 226);
+    border-right: 1px solid rgb(117, 205, 226); */
     height: 80vh;
 }
 
 #main h1 {
-    margin: 10%;
+    margin: 5% 0 10% 10%;
     opacity: 0;
 }
+
 
 .slider {
     opacity: 0;
 }
 
 #slider-around {
-    border-top: 1px solid rgb(237, 236, 232);
-    background: linear-gradient(rgb(237, 236, 232), rgb(117, 205, 226))
+    /* border-top: 1px solid rgb(237, 236, 232); */
+    /* background: linear-gradient(rgb(237, 236, 232), rgb(117, 205, 226)) */
 }
 
 #pre_services {
-    background-color: rgb(117, 205, 226);
+    /* background-color: rgb(117, 205, 226); */
 }
 
 #services {
-    border: 1px solid transparent;
+    /* border: 1px solid transparent;
     border-top:rgb(117, 205, 226);
-    background: linear-gradient(rgb(117, 205, 226), rgb(255, 246, 236));
+    background: linear-gradient(rgb(117, 205, 226), rgb(255, 246, 236)); */
 }
 
 #services > div, 
@@ -98,11 +101,49 @@ header menu div:hover {
     padding: 2%;
 }
 
+#services > div {
+    border: 5px solid white;
+    background: rgba(255, 246, 236, 0.5);
+    width: 80%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    padding: 3%;
+}
+
+.product-list {
+    width: 80%;
+    margin-left: 10%;
+    display: inline-block;
+}
+
+.order-button {
+    border: 3px solid rgb(189, 114, 0);
+    border-radius: 9%;
+    background-color: rgb(228, 137, 0);
+    color: white;
+    width: 20%;
+    margin: 5% 0 5vh 40%;
+    padding-top: 4.5vh;
+    height: 7vh;
+    text-align: center;
+}
+
+.order-button:hover {
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding-top: 6vh;
+    height: 9vh;
+    width: 26%;
+    margin-left: 37%;
+    margin-bottom: 1vh;
+}
+
 
 #about {
-    height: 2000px;
+    /* height: 2000px;
     border: 1px solid black;
-    background-color: aqua;
+    background-color: aqua; */
 }
 
 #pre_main, #pre_services, #pre_about {

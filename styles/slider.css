@@ -31,7 +31,7 @@
     background-color: rgba(221, 221, 221, 0.59);
 }
 
-.slide-nav div:hover {
+.slide-nav > div:hover {
     background-color: rgba(221, 221, 221, 0.9);
 }
 
@@ -58,11 +58,14 @@
     width: 10%;
     height: 100%;
     float: left;
+    border-radius: 0 30% 30% 0;
 }
+
 .slide-nav .right-arrow {
     width: 10%;
     height: 100%;
     float: right;
+    border-radius: 30% 0 0 30%;
 }
 
 .image1 {
