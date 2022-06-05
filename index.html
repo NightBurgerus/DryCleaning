@@ -125,7 +125,7 @@
                         <div class="open-modal" data-modal="47">Перчатки</div>
                     </div>
                 </div>
-                <div class="order-button shadow">Заказать</div>
+                <a onclick="moveToForm()"><div class="order-button shadow">Заказать</div></a>
 
 
 
@@ -554,6 +554,11 @@
                 }
             }, delay)
         }
+
+        function moveToForm() {
+            window.open("form.html")
+        }
+
     </script>
 </body>
 
