@@ -45,3 +45,8 @@
     z-index: 10;
     display: none;
 }
+
+.modal article {
+    margin-top: 30px 0 30px 0;
+    font-size: 0.5em;
+}
