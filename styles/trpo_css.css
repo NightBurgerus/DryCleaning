@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-a, a:visited {
+a,
+a:visited {
     color: black;
-    text-decoration: none;
 }
 
 body {
@@ -16,17 +17,22 @@ body {
 
 header {
     z-index: 110;
-    height: 10vh;
+    height: 90px;
     width: 100%;
     position: fixed;
-    background-color: rgba(50, 50, 50, 0.3);
+    /* background-color: rgba(50, 50, 50, 0.3); */
+    /* ГРАДИЕНТ!!1! */
+
+    background: rgb(11, 22, 25);
+    background: radial-gradient(circle, rgba(11, 22, 25, 0) 0%, rgba(163, 201, 214, 1) 64%, rgba(171, 163, 214, 1) 92%);
+
 }
 
 #header-image {
     float: left;
     height: 10vh;
     width: 10vh;
-    background-color: aqua;
+    background-color: rba(171, 163, 214);
 }
 
 header h1 {
@@ -36,9 +42,13 @@ header h1 {
 
 header menu {
     float: right;
+    display: flex;
+    
 }
 
-header a:visited, header a:active {
+
+header a:visited,
+header a:active {
     color: black;
 }
 
@@ -49,8 +59,9 @@ header menu div {
 }
 
 header menu div:hover {
-    background-color: black;
+    background-color: rgb(66, 88, 135);
     color: white;
+    border-radius: 30px;
 }
 
 /*  MAIN */
@@ -59,7 +70,7 @@ header menu div:hover {
     /* background-color: rgb(117, 205, 226); */
 }
 
-#main > div:first-child{
+#main>div:first-child {
     opacity: 0;
     /* background: url("img/back1.jpeg");
     background-size: 100% cover;
@@ -68,13 +79,31 @@ header menu div:hover {
     border-top: 1px solid rgb(117, 205, 226);
     border-left: 1px solid rgb(117, 205, 226);
     border-right: 1px solid rgb(117, 205, 226); */
-    height: 80vh;
 }
 
 #main h1 {
-    margin: 5% 0 10% 10%;
+    text-align: center;
     opacity: 0;
+    margin: 2%;
+
 }
+
+.main-text{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(84, 67, 180, 0.066);
+    padding: 1% 0 3%;
+}
+
+.start-text{
+    padding: 0 5%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+
+
+
 
 
 .slider {
@@ -96,19 +125,24 @@ header menu div:hover {
     background: linear-gradient(rgb(117, 205, 226), rgb(255, 246, 236)); */
 }
 
-#services > div, 
-#services > h1 {
+#services>div,
+#services>h1 {
     opacity: 0;
     padding: 2%;
 }
 
-#services > div {
+
+#services>h1 {
+    text-align: center;
+}
+
+
+#services>div {
     border: 5px solid white;
     background: rgba(255, 246, 236, 0.5);
     width: 80%;
     border-radius: 10px;
     margin-left: 5%;
-    margin-bottom: 10%;
     padding: 3%;
 }
 
@@ -142,27 +176,147 @@ header menu div:hover {
 }
 
 
+
 #about {
     /* height: 2000px;
     border: 1px solid black;
     background-color: aqua; */
 }
 
-#pre_main, #pre_services, #pre_about {
+#pre_main,
+#pre_about {
     height: 10vh;
 }
 
-.slider > div:nth-child(2) {
+.slider>div:nth-child(2) {
     background-color: rgb(224, 229, 242);
     width: 100%;
     height: 70%;
 }
 
 
+
+
+/* МОИ ИЗМЕНЕНИЯ */
+
+/* Логотип занимает все пространство div  */
+#Ilya_logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+}
+
+.my_footer {
+    margin-left: -10px;
+    top: 0;
+    display: block;
+    border: 1px solid black;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #c5dff9;
+    color: rgb(59, 90, 118);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .footer__section {
+    display: flex;
+    align-items: center;
+} */
+
+
+.footer-link{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer__item {
+    padding: 20px 40px;
+    display: inline-block;
+    background-color: rgb(87, 112, 238);
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 40px;
+}
+
+
+
+
+.footer__item:hover {
+    background-color: #b9f5a5;
+    border-radius: 20px;
+}
+
+.my_footer h3{
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+h3{
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.footer_item logo {
+    margin: 50px, 50px, 50px, 50px;
+    align-items: center;
+
+}
+
+.copy{
+    align-items: right;
+}
+
+.footer-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.col-md-4 {
+    display: block;
+    align-items: center;
+    color: black;
+    margin-left: 10px;
+}
+
+#about div, 
+#about h1 {
+    margin: 10%;
+    opacity: 0;
+}
+
+#about section {
+    opacity: 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20%;
+    border: 7px solid white;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header {
+    margin-top: 10%;
+    font-size: 2.5em;
+    color: white;
+}
+
 .shadow {
     text-shadow: 
-    1px 0px 2px black,
-    -1px 0px 2px black, 
-    0px 1px 2px black,
-    0px -1px 2px black;
+    2px 0px 2px black, 
+    -2px 0px 2px black, 
+    0px 2px 2px black, 
+    0px -2px 2px black 
+    ;
 }
+
+/*Приклы*/
+
+.map{
+    width: 100%;
+}
+

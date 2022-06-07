@@ -5,7 +5,7 @@ function initSlider() {
     let arrowWidth = right_arrow.clientWidth / right_arrow.parentElement.clientWidth * 100
     setInterval(function() {
         nextSlide("right", null)
-    }, 3000)
+    }, 5000)
 }
 
 let slide = 1

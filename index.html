@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <div id="header-image"></div>
+        <div id="header-image"><img id='Ilya_logo' src="styles/img/logoShort.png"></div>
         <h1>Химчистка</h1>
         <menu>
             <a href="#pre_main">
@@ -33,7 +33,7 @@
         <div id="main">
             <div id="startBlock">
                 <img src="styles/img/logoShort.png">
-                <h1>Главная</h1>
+                <h1 class="header shadow">Качественно! Быстро! Недорого!</h1>
             </div>
             <div id="slider-around">
 
@@ -62,9 +62,9 @@
                     </div>
                     <div class="images-labels">
                         <!--  ПОДПИСИ К СЛАЙДАМ  -->
-                        <div class="label1 ">Хуй</div>
-                        <div class="label2 hiden">Соси</div>
-                        <div class="label3 hiden">Губой тряси</div>
+                        <div class="label1 "><strong>Лучшие на рынке!</strong><br><br>В нашей химчитстке лучшее качество услуг по низким ценам.</div>
+                        <div class="label2 hiden"><strong>Приветливый персонал</strong><br><br>Мы заботимся о каждом клиенте!</div>
+                        <div class="label3 hiden"><strong>Новейшее оборудование</strong><br><br>В работе мы используем только современное оборудование, чтобы обеспечить наивысшее качество услуг</div>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
         </div>
         <div id="pre_services"></div>
         <div id="services">
-            <h1>Наши услуги</h1>
+            <h1 class="header shadow">Наши услуги</h1>
             <div>
                 <p>Выберете категорию</p>
                 <div class="details">
@@ -519,17 +519,45 @@
         </div>
         <div id="pre_about"></div>
         <div id="about">
-            <h1>О нас</h1>
-            <div style="position:relative;overflow:hidden;"><a
-                    href="https://yandex.ru/maps/192/vladimir/?utm_medium=mapframe&utm_source=maps"
-                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Владимир</a><a
-                    href="https://yandex.ru/maps/192/vladimir/?ll=40.372543%2C56.145001&mode=whatshere&utm_medium=mapframe&utm_source=maps&whatshere%5Bpoint%5D=40.371725%2C56.145383&whatshere%5Bzoom%5D=18&z=18"
-                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Строителей, 3/7 —
-                    Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUJEEqBKA" width="800" height="480"
-                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <section>
+                <h1 class="header shadow">Где нас найти?</h1>
+                <div style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/192/vladimir/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Владимир</a><a
+                        href="https://yandex.ru/maps/192/vladimir/?ll=40.372543%2C56.145001&mode=whatshere&utm_medium=mapframe&utm_source=maps&whatshere%5Bpoint%5D=40.371725%2C56.145383&whatshere%5Bzoom%5D=18&z=18"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Строителей, 3/7 —
+                        Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUJEEqBKA" width="800" height="480"
+                        frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            </section>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <nav class="my_footer">
+            <div class="footer__section">
+                <div class="footer_item headerlogo">
+                </div>
+                <div class="footer_item logo">
+                    <a href="https://vk.com/nightburgerus" target="_blank"><img src="icons/bxl-vk.svg" alt="vk"></a>
+                    <a href="https://www.facebook.com/diana.dryclean/" target="_blank"><img src="icons/facebook.svg"
+                            alt="fc"></a>
+                    <a href="https://www.instagram.com/dryclean.ru/" target="_blank"><img src="icons/instagram.svg"
+                            alt="insta"></a>
+                </div>
+                <div class="footer-text">
+                    <div class="col-md-4">
+                        <p>+7 (900) 475-00-16</p>
+                        <p>г.Владимир, проспект Строителей, 3/7</p>
+                    </div>
+                    <div class="copy">
+                        <p>&#169; Все права защищены
+                            <script> document.write(new Date().getFullYear())</script> г.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="header__section"></div>
+
+    </footer>
     <script src="scripts/slider.js"></script>
     <script src="scripts/details.js"></script>
     <script src="scripts/modal-js.js"></script>
@@ -547,7 +575,6 @@
             setTimeout(function () {
                 animation(header, 0, 0.05, 0)
             }, 1000)
-
         }
 
         let logo = document.getElementById("main").getElementsByTagName("img")[0]
@@ -559,7 +586,14 @@
         let servicesHeaderIsShowed = false
         let servicesY = document.getElementById("main").getElementsByTagName("div")[1].offsetHeight + document.getElementById("pre_services").offsetHeight * 2
 
+        let mapHeader  = document.getElementById("about").getElementsByTagName("h1")[0]
+        let map        = document.getElementById("about").getElementsByTagName("div")[0]
+        let mapHeaderIsShowed = false
+
         window.onscroll = function () {
+            let mapHeaderY = mapHeader.getBoundingClientRect().top - window.screen.height / 2
+            console.log(mapHeaderY)
+            
             if (pageYOffset >= document.getElementById("main").getElementsByTagName("div")[0].offsetHeight / 2 && !sliderIsShowed) {
                 initSlider()
                 animation(slider, 0, 0.05, 0)
@@ -569,6 +603,15 @@
                 animation(services, 0, 0.1, 500)
                 animation(servicesList, 0, 0.1, 1000)
                 servicesHeaderIsShowed = true;
+            }
+
+            if (mapHeaderY < 0 && !mapHeaderIsShowed) {
+                let section = document.getElementById("about").getElementsByTagName("section")[0]
+                
+                animation(section, 0, 0.05, 0)
+                animation(mapHeader, 0, 0.5, 500)
+                animation(map, 0, 0.05, 1000)
+                mapHeaderIsShowed = true
             }
         }
 
