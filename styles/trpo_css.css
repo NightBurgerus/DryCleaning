@@ -37,7 +37,7 @@ header {
 
 header h1 {
     float: left;
-    padding: 3vh;
+    padding-left: 3vh;
 }
 
 header menu {
